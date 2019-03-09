@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    
+    <h:head>
+    </h:head>
+    
+    <h3>Lista de Pessoas do banco PostgreSQL</h3>
+    <h:body>
+        <h:dataTable var="pessoa" value="#{pessoaBean.pessoasP}">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                #{pessoa.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">CPF</f:facet>
+                #{pessoa.cpf}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Data Nascimento</f:facet>
+                #{pessoa.data_nascimento}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Endereço</f:facet>
+                #{pessoa.endereco}
+            </h:column>
+        </h:dataTable>
+    </h:body>
+    
+    <h3>Lista de Pessoas do banco MySQL</h3>
+    
+    <h:body>
+        <h:dataTable var="pessoa2" value="#{pessoaBean.pessoasMySQL}">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                #{pessoa2.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">CPF</f:facet>
+                #{pessoa2.cpf}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nome</f:facet>
+                #{pessoa2.nome}
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html>
+
