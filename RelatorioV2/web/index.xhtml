@@ -9,7 +9,7 @@
     
     <h3>Lista de Pessoas do banco PostgreSQL</h3>
     <h:body>
-        <h:dataTable var="pessoa" value="#{pessoaBean.pessoasP}">
+        <h:dataTable var="pessoa" value="#{pessoaBean.pessoasAll}" styleClass="table">
             <h:column>
                 <f:facet name="header">Id</f:facet>
                 #{pessoa.id}
@@ -17,6 +17,10 @@
             <h:column>
                 <f:facet name="header">CPF</f:facet>
                 #{pessoa.cpf}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nome</f:facet>
+                #{pessoa.nome}
             </h:column>
             <h:column>
                 <f:facet name="header">Data Nascimento</f:facet>
@@ -29,8 +33,8 @@
         </h:dataTable>
     </h:body>
     
+    <!--
     <h3>Lista de Pessoas do banco MySQL</h3>
-    
     <h:body>
         <h:dataTable var="pessoa2" value="#{pessoaBean.pessoasMySQL}">
             <h:column>
@@ -47,5 +51,6 @@
             </h:column>
         </h:dataTable>
     </h:body>
+    -->
 </html>
 

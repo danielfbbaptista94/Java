@@ -5,6 +5,6 @@ import model.Pessoa;
 
 public interface IPessoaDAO 
 {
-    public ArrayList<Pessoa> listarPessoasMySql(Pessoa possoa) throws Exception;
-    public ArrayList<Pessoa> listarPessoasPostgre(Pessoa possoa) throws Exception;
+    public ArrayList<Pessoa> listarPessoasMySql() throws Exception;
+    public ArrayList<Pessoa> listarPessoasPostgre() throws Exception;
 }

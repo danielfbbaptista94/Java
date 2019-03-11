@@ -19,7 +19,7 @@ public class PessoaDAO implements IPessoaDAO
     }
     
     @Override
-    public ArrayList<Pessoa> listarPessoasPostgre(Pessoa possoa) throws Exception 
+    public ArrayList<Pessoa> listarPessoasPostgre() throws Exception 
     {
         ArrayList<Pessoa> lista = new ArrayList<>();
         PreparedStatement st = ConexaoPostegre.getInstancia().getConnection().prepareStatement("select * from pessoas");
@@ -38,7 +38,7 @@ public class PessoaDAO implements IPessoaDAO
     }
 
     @Override
-    public ArrayList<Pessoa> listarPessoasMySql(Pessoa possoa) throws Exception 
+    public ArrayList<Pessoa> listarPessoasMySql() throws Exception 
     {
         ArrayList<Pessoa> lista = new ArrayList<>();
         PreparedStatement st = ConexaoMySQL.getInstancia().getConnection().prepareStatement("select * from pessoas.pessoas");
