@@ -12,7 +12,9 @@ public class Camisa extends IComponent
     @Override
     public void aumentarPreco(double percente) 
     {
-        System.out.println( "Preço anterior: " + this.getPreco() + " -->> NOVO Preço: " + (this.getPreco() + (getPreco() * percente)) );
+        System.out.println("Camisa preço anterioir: " + preco);
+        preco += preco * percente;
+        System.out.println("Novo preço: " + preco);
     }
 
     @Override

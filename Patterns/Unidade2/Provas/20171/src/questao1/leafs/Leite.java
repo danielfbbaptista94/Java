@@ -14,9 +14,9 @@ public class Leite extends IComponent
     @Override
     public void aumentarPreco(double percente) 
     {
-        double precoF = this.preco;
-        precoF += (this.preco * percente);
-        System.out.println( "Preço anterior: " + getPreco() + " -->> NOVO Preço: " + precoF );
+        System.out.println("Leite preço anterioir: " + preco);
+        preco += preco * percente;
+        System.out.println("Novo preço: " + preco);
     }
     
     @Override
