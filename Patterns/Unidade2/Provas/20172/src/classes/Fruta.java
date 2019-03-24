@@ -22,7 +22,7 @@ public class Fruta extends IComponent
     }
 
     @Override
-    public void removeAll() {
+    public boolean removeAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

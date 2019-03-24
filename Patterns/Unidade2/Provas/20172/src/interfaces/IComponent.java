@@ -33,11 +33,15 @@ public abstract class IComponent
     
     public boolean removeFruta(IComponent fruta)
     {
-        return false;
+        return true;
     }
     
     public abstract IComponent getChild(String caracteristica);
-    public abstract void removeAll();
+    
+    public boolean removeAll()
+    {
+        return true;
+    }
     
     public abstract void limparFrutas();
 }

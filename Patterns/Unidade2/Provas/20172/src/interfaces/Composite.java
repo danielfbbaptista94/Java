@@ -54,11 +54,12 @@ public class Composite extends IComponent
     }
 
     @Override
-    public void removeAll() 
+    public boolean removeAll() 
     {
         for(IComponent c : childrens)
         {
             removeFruta(c);
         }
+        return false;
     }
 }
