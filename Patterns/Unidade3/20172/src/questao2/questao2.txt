@@ -1,0 +1,26 @@
+Semelhanças:
+    Encapsulam algoritmo,visam à redução de acoplamento, template method por herança e Strategy por composição.
+Diferenças:
+    O Template Method é muito mais eficiente que Strategy, enquanto Strategy é mais flexível porque 
+    usa a composição de objetos. No template method, todos os códigos duplicados estão em superclasse, 
+    de modo que toda a subclasse compartilhe esses códigos duplicados. enquanto no Strategy, 
+    poucos do código duplicado podem estar em toda a subclasse.
+    Strategy diz, eu não dependo de ninguém, eu posso fazer todo o meu algoritmo. 
+    Enquanto Template diz, eu não mantenho nenhum código duplicado, então eu uso reutilização de código de 
+    técnica importante e muito eficiente. No Strategy, o cliente pode alterar seu algoritmo em tempo de 
+    execução simplesmente usando um objeto de estratégia diferente. No Template, os métodos abstratos são 
+    implementados por subclasses. embora não seja um método abstrato em Estratégia, é um código independente.
+    Para evitar que a subclasse altere o algoritmo no Template, declare o Método de modelo como o Template
+    final e o Princípio de Hollywood, não ligue para Nós, ligaremos para você. Quando projetamos com o padrão 
+    de Template, somos (Template) dizendo à subclasse, "não ligue para nós, ligaremos para você". 
+
+Exemplo real strategy:
+    quando houver algum tipo de mudança no formato do calculo fiscal, não precisamos fazer nenhuma alteração na
+    classe NotaFiscal, é só criarmos uma nova classe, implementar a interface IImposto e na variável imposto, 
+    da classe NotaFiscal passar a nova classe, que a NotaFiscal fará o calculo da mesma.
+
+Exemplo real Template Method:
+    implementação de um pool de conexões.É uma camada que fica entre o cliente de banco de dados, 
+    que faz as conexões com o banco, e o próprio banco. A idéia dessa camada intermediária é que o cliente 
+    possa criar conexões com o banco usando o connection pool quase da mesma forma que criaria
+    usando JDBC diretamente, de modo que fica transparente para ele como a conexão é retornada.
