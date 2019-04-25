@@ -20,6 +20,6 @@ public class Main
         
         invoker.unexecute();
         invoker.unexecute();
-        
+        invoker.execute();
     }
 }
