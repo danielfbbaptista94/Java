@@ -8,13 +8,13 @@ public class Main
 {
     public static void main(String[] args) 
     {
-        Professor Sandro = new Professor("Sandro");
+        Professor sandro = new Professor("Sandro");
         
-        IObserver Daniel = new Aluno(Sandro);
+        IObserver daniel = new Aluno(sandro);
         
-        Sandro.addObserver(Daniel);
-        Sandro.setDataProva("22/04/2019");
-        Sandro.removeObserver(Daniel);
-        Sandro.setDataProva("25/04/2019");
+        sandro.addObserver(daniel);
+        sandro.setDataProva("22/04/2019");
+        //sandro.removeObserver(daniel);
+        sandro.setDataProva("25/04/2019");
     }
 }
