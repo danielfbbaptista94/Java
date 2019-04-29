@@ -9,7 +9,7 @@ public class ShoppingCartVisitor implements IShoppingCartVisitor
     @Override
     public int visit(Book book) 
     {
-        int cost = 0;
+        int cost;
         
         if(book.getPrice() > 50)
         {
